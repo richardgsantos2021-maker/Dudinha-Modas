@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Dudinha Modas</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="/landpage.html" class="logo">Dudinha Modas</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/abertura.html">Abertura</a></li>
+                <li><a href="/pessoal.html">Cadastro</a></li>
+                <li><a href="/tabela.html" class="active">Catálogo</a></li>
+                <li><a href="/carrossel.html">Destaques</a></li>
+                <li><a href="/graficos.html">Dashboard</a></li>
+                <li><a href="/landpage.html">Home</a></li>
+                <li><a href="/localizacao.html">Lojas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <h1 class="page-title">Catálogo de Produtos</h1>
+        
+        <div class="controls-area form-row mb-4">
+            <div class="col-md-8">
+                <input type="text" id="searchInput" class="form-control" placeholder="Filtrar por nome, cor ou preço...">
+            </div>
+            <div class="col-md-4">
+                <select id="sortSelect" class="form-control">
+                    <option value="">Ordenar por...</option>
+                    <option value="nome_asc">Nome (A-Z)</option>
+                    <option value="nome_desc">Nome (Z-A)</option>
+                    <option value="preco_asc">Preço (Crescente)</option>
+                    <option value="preco_desc">Preço (Decrescente)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="product-grid" id="catalog-grid">
+
+            <div class="product-item">
+                <img src="/img/blazer.png" alt="Blazer Clássico">
+                <div class="product-info">
+                    <h3>Blazer Clássico</h3>
+                    <p class="price">R$ 299,90</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/img/calça.png" alt="Calça Wide Leg">
+                <div class="product-info">
+                    <h3>Calça Wide Leg</h3>
+                    <p class="price">R$ 159,90</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/img/cardig.png" alt="Cardigan Leve">
+                <div class="product-info">
+                    <h3>Cardigan Leve</h3>
+                    <p class="price">R$ 229,90</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/img/botacamisabranca.png" alt="Look Coleção Outono">
+                <div class="product-info">
+                    <h3>Look Coleção Outono</h3>
+                    <p class="price">R$ 549,90</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/img/mulher.png" alt="Look Terno Primavera">
+                <div class="product-info">
+                    <h3>Look Terno Primavera</h3>
+                    <p class="price">R$ 699,90</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/img/mulherpreto.png" alt="Blazer com Blusa Preta">
+                <div class="product-info">
+                    <h3>Blazer com Blusa Preta</h3>
+                    <p class="price">R$ 299,90</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/img/mulherfullpreto.png" alt="Look Total Black">
+                <div class="product-info">
+                    <h3>Look Total Black</h3>
+                    <p class="price">R$ 319,80</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="/img/mulhergemini.png" alt="Cardigan Botões">
+                <div class="product-info">
+                    <h3>Cardigan Botões</h3>
+                    <p class="price">R$ 289,90</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Dudinha Modas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    </body>
+</html>

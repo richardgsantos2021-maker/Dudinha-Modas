@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Postal - Dudinha Modas</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="/landpage.html" class="logo">Dudinha Modas</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/abertura.html">Abertura</a></li>
+                <li><a href="/pessoal.html" class="active">Cadastro</a></li>
+                <li><a href="/tabela.html">Catálogo</a></li>
+                <li><a href="/carrossel.html">Destaques</a></li>
+                <li><a href="/graficos.html">Dashboard</a></li>
+                <li><a href="/landpage.html">Home</a></li>
+                <li><a href="/localizacao.html">Lojas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <h1 class="page-title">Endereço de Entrega</h1>
+
+        <div class="row">
+            <div class="col-lg-5 d-none d-lg-block">
+                <img src="/img/Sacola.png" alt="Ilustração de Entrega" style="width: 100%; object-fit: contain; height: 100%; padding: 40px;">
+            </div>
+            
+            <div class="col-lg-7">
+                <div class="form-container" style="border: none; padding: 0;">
+                    <form>
+                        <fieldset>
+                            <legend>2. Endereço</legend>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="cep">CEP*</label>
+                                    <input type="text" class="form-control" id="cep" value="14409-550" maxlength="9">
+                                </div>
+                                <div class="form-group col-md-8">
+                                    <label for="address">Logradouro*</label>
+                                    <input type="text" class="form-control" id="address" value="AV santa terezinha">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="number">Número*</label>
+                                    <input type="text" class="form-control" id="number" value="620">
+                                </div>
+                                <div class="form-group col-md-8">
+                                    <label for="complemento">Complemento</label>
+                                    <input type="text" class="form-control" id="complemento" value="Casa">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="neighborhood">Bairro*</label>
+                                    <input type="text" class="form-control" id="neighborhood" value="city petropolis">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="city">Cidade*</label>
+                                    <input type="text" class="form-control" id="city" value="Franca"> 
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="state">Estado*</label>
+                                    <input type="text" class="form-control" id="state" value="SP">
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <div class="d-flex justify-content-between">
+                            <a href="/pessoal.html" class="btn btn-outline-dark">Voltar</a>
+                            <a href="/estudantil.html" class="btn btn-dark">Próximo: Estudantil</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Dudinha Modas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

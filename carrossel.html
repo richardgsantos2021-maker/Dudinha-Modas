@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destaques da Coleção - Dudinha Modas</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="/landpage.html" class="logo">Dudinha Modas</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/abertura.html">Abertura</a></li>
+                <li><a href="/pessoal.html">Cadastro</a></li>
+                <li><a href="/tabela.html">Catálogo</a></li>
+                <li><a href="/carrossel.html" class="active">Destaques</a></li>
+                <li><a href="/graficos.html">Dashboard</a></li>
+                <li><a href="/landpage.html">Home</a></li>
+                <li><a href="/localizacao.html">Lojas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <h1 class="page-title">Destaques da Coleção</h1>
+
+        <div id="meuCarrossel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#meuCarrossel" data-slide-to="0" class="active"></li>
+                <li data-target="#meuCarrossel" data-slide-to="1"></li>
+                <li data-target="#meuCarrossel" data-slide-to="2"></li>
+                <li data-target="#meuCarrossel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" style="border: 1px solid #eee;">
+                <div class="carousel-item active">
+                    <img src="/img/mulher.png" class="d-block w-100" alt="Coleção Primavera" style="height: 80vh; object-fit: cover;">
+                    </div>
+                <div class="carousel-item">
+                    <img src="/img/blazer.png" class="d-block w-100" alt="Blazer Clássico" style="height: 80vh; object-fit: contain;">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/calça.png" class="d-block w-100" alt="Calça Wide Leg" style="height: 80vh; object-fit: contain;">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/cardig.png" class="d-block w-100" alt="Cardigan Leve" style="height: 80vh; object-fit: contain;">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#meuCarrossel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#meuCarrossel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Dudinha Modas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

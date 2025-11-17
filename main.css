@@ -1,0 +1,594 @@
+/* --- Variáveis CSS para Cores (Estilo ZARA) --- */
+:root {
+    --color-primary: #333333; /* Preto quase chumbo para textos e elementos principais */
+    --color-secondary: #A8A8A8; /* Cinza médio para detalhes e textos secundários */
+    --color-accent1: #BDBDBD; /* Cinza claro para bordas e separadores */
+    --color-accent2: #E0E0E0; /* Cinza muito claro para fundos sutis e linhas de grade */
+    --color-text: #555555; /* Texto cinza escuro para legibilidade */
+    --color-background: #FFFFFF; /* Fundo branco principal */
+    --color-light-background: #F8F8F8; /* Fundo levemente cinza para seções */
+    --color-highlight: #FFD700; /* Dourado para pequenos destaques (opcional) */
+
+    --font-playfair: 'Playfair Display', serif;
+    --font-lato: 'Lato', sans-serif;
+}
+
+/* --- Estilos Gerais --- */
+body {
+    font-family: var(--font-lato);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-background);
+    color: var(--color-text);
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-family: var(--font-playfair);
+    font-size: 2.8rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+    color: var(--color-primary);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+/* --- Header e Navegação --- */
+.site-header {
+    background-color: var(--color-background);
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--color-accent2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+.site-header .logo {
+    font-family: var(--font-playfair);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza itens em telas menores */
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    font-family: var(--font-lato);
+    font-size: 1.1rem;
+    color: var(--color-text);
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    color: var(--color-primary);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* --- Hero Banner (Landpage) --- */
+.hero-banner {
+    width: 100%;
+    height: 70vh; /* Altura da viewport */
+    background-size: cover;
+    background-position: center top; /* Ajustado para focar na mulher */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-background);
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.2)); /* Leve escurecimento */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-playfair);
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: var(--color-background);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: var(--color-background);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-content .btn {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+/* --- Product Grid (Landpage) --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-item {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-accent2);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: 350px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Recorta a imagem para preencher o espaço */
+    object-position: center top; /* Ajusta o foco da imagem */
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-family: var(--font-playfair);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.product-info p {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+.product-info .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.product-info .btn {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-info .btn:hover {
+    background-color: var(--color-secondary);
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+/* --- Formulários (Cadastro) --- */
+.form-container {
+    background-color: var(--color-background);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-container fieldset {
+    border: 1px solid var(--color-accent1);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.form-container legend {
+    font-family: var(--font-playfair);
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    padding: 0 10px;
+    margin-bottom: 0;
+    width: auto; /* Para que a legend não ocupe 100% da largura */
+}
+
+.form-group label {
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+
+.form-control {
+    border-color: var(--color-accent1);
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25);
+}
+
+.btn-dark {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.btn-outline-dark {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+/* --- Seção de Abertura --- */
+.abertura-container {
+    text-align: center;
+    background-color: var(--color-background);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.abertura-container h1 {
+    font-size: 2.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.abertura-container h4 {
+    font-family: var(--font-lato);
+    color: var(--color-secondary);
+    margin-bottom: 25px;
+}
+
+.abertura-container p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    text-align: justify;
+}
+
+/* --- Tabela de Catálogo --- */
+.controls-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Para responsividade */
+    gap: 15px; /* Espaço entre os controles em telas menores */
+}
+
+.controls-area .form-group {
+    margin-bottom: 0;
+    flex: 1; /* Faz os inputs ocuparem o espaço disponível */
+    min-width: 200px; /* Largura mínima para os inputs */
+}
+
+/* Ajuste específico para o filtro <select> da Tabela */
+.controls-area select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.1L146.2%20202.7%2018.8%2074.5c-6.7-6.7-17.7-6.7-24.4%200-6.7%206.7-6.7%2017.7%200%2024.4l129%20129c6.7%206.7%2017.7%206.7%2024.4%200l129-129c6.8-6.6%206.8-17.7.1-24.4-6.6-6.7-17.7-6.7-24.4%200z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px;
+    padding-left: 15px;
+    text-align: left;
+}
+
+
+.fashion-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-background);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que bordas arredondadas funcionem */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.fashion-table th,
+.fashion-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-accent2);
+}
+
+.fashion-table th {
+    background-color: var(--color-light-background);
+    color: var(--color-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.fashion-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.fashion-table tbody tr:hover {
+    background-color: var(--color-light-background);
+}
+
+/* --- Carrossel de Destaques --- */
+.carousel-item img {
+    height: 80vh; /* Ajuste para ter uma boa altura */
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    border-radius: 5px;
+    bottom: 20px; /* Posição um pouco acima da base */
+}
+
+.carousel-caption h5 {
+    font-family: var(--font-playfair);
+    font-size: 2.5rem;
+    color: var(--color-background);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: var(--color-background);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* --- Dashboard --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 colunas em telas maiores, 1 em menores */
+    gap: 30px; /* Espaço entre os gráficos */
+    margin-top: 40px;
+}
+
+.chart-container {
+    background-color: var(--color-background); /* Fundo branco */
+    border: 1px solid var(--color-accent2); /* Borda clara */
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para conteúdo ficar bem distribuído */
+    align-items: stretch;
+}
+
+.chart-container h2 {
+    font-family: var(--font-playfair);
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-container.full-width {
+    grid-column: 1 / -1; /* Ocupa todas as colunas disponíveis */
+}
+
+/* Garante que o canvas ocupe o espaço disponível e seja responsivo */
+.chart-container canvas {
+    max-height: 400px; /* Altura máxima para gráficos */
+    width: 100% !important; /* Sobrescreve o estilo inline do Chart.js */
+    height: 100% !important; /* Sobrescreve o estilo inline do Chart.js */
+}
+
+
+/* --- Responsividade Geral --- */
+@media (max-width: 992px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .site-header .logo {
+        margin-bottom: 15px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav li {
+        margin: 5px 0;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .controls-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .controls-area .form-group {
+        width: 100%;
+        min-width: unset;
+    }
+    .chart-container.full-width {
+        grid-column: auto; /* Remove full-width em telas pequenas */
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+    .main-container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    .form-container {
+        padding: 25px;
+    }
+    .form-container legend {
+        font-size: 1.4rem;
+    }
+    .abertura-container {
+        padding: 25px;
+    }
+    .abertura-container h1 {
+        font-size: 1.8rem;
+    }
+    .abertura-container p {
+        font-size: 1rem;
+    }
+    .carousel-caption h5 {
+        font-size: 1.8rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-header {
+        padding: 15px 20px;
+    }
+    .site-header .logo {
+        font-size: 1.6rem;
+    }
+    .main-nav li {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .product-item img {
+        height: 280px;
+    }
+    .product-info h3 {
+        font-size: 1.2rem;
+    }
+    .product-info p {
+        font-size: 1rem;
+    }
+    .product-info .price {
+        font-size: 1.1rem;
+    }
+    .site-footer {
+        padding: 20px 15px;
+    }
+}
